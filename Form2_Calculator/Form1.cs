@@ -17,6 +17,10 @@ namespace Form2_Calculator
             InitializeComponent();
         }
 
+        double total1 = 0;
+        string theOperator;
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text += button1.Text;
@@ -42,5 +46,43 @@ namespace Form2_Calculator
             textBox1.Text += buttonDot.Text;
         }
 
+        private void buttonPlus_Click(object sender, EventArgs e)
+        {
+            total1 += double.Parse(textBox1.Text);
+            theOperator = "+";
+            textBox1.Clear();
+        }
+
+        private void buttonMinus_Click(object sender, EventArgs e)
+        {
+            total1 += double.Parse(textBox1.Text);
+            theOperator = "-";
+            textBox1.Clear();
+        }
+
+        private void buttonEqual_Click(object sender, EventArgs e)
+        {
+            double num2;
+            double answer;
+
+            num2 = double.Parse(textBox1.Text);
+
+            switch (theOperator)
+            {
+                case "+":
+                    answer = total1 + num2;
+                    textBox1.Text = answer.ToString();
+                    total1 = 0;
+                    break;
+                case "-":
+                    answer = total1 - num2;
+                    textBox1.Text = answer.ToString();
+                    total1 = 0;
+                    break;
+               default:
+                    answer = 0;
+                    break;
+            }
+        }
     }
 }

@@ -113,6 +113,7 @@ namespace Form2_Calculator
             this.buttonPlus.TabIndex = 7;
             this.buttonPlus.Text = "+";
             this.buttonPlus.UseVisualStyleBackColor = true;
+            this.buttonPlus.Click += new System.EventHandler(this.buttonPlus_Click);
             // 
             // buttonMinus
             // 
@@ -123,6 +124,7 @@ namespace Form2_Calculator
             this.buttonMinus.TabIndex = 8;
             this.buttonMinus.Text = "-";
             this.buttonMinus.UseVisualStyleBackColor = true;
+            this.buttonMinus.Click += new System.EventHandler(this.buttonMinus_Click);
             // 
             // buttonEqual
             // 
@@ -133,6 +135,7 @@ namespace Form2_Calculator
             this.buttonEqual.TabIndex = 9;
             this.buttonEqual.Text = "=";
             this.buttonEqual.UseVisualStyleBackColor = true;
+            this.buttonEqual.Click += new System.EventHandler(this.buttonEqual_Click);
             // 
             // Form1
             // 
